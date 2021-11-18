@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>Application TagWall</Name>
+    <Assembly>C:\Users\marci\Desktop\C#\2021.11.17 Revit\src\TagWall\bin\Debug\TagWall.dll</Assembly>
+    <FullClassName>TagWall.App</FullClassName>
+    <ClientId>3d1c5e28-b5e2-4ca0-996b-c6bfe115aa23</ClientId>
+    <VendorId>com.typepad.thebuildingcoder</VendorId>
+    <VendorDescription>The Building Coder, http://thebuildingcoder.typepad.com</VendorDescription>
+  </AddIn>
+</RevitAddIns>
