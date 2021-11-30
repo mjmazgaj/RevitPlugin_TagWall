@@ -1,16 +1,16 @@
 ﻿using Autodesk.Revit.UI;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TagWall.core;
 using TagWall.res;
 
 namespace TagWall.ui
 {
     public static class RevitPushButton
     {
+        /// <summary>
+        /// Create new PushButton based on provide data.
+        /// </summary>
+        /// <param name="data">Name of RevitPushButtonDataModel</param>
+        /// <returns>PushButton</returns>
         public static PushButton Create(RevitPushButtonDataModel data)
         {
             var guid = Guid.NewGuid().ToString();

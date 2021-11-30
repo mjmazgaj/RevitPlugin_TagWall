@@ -13,7 +13,11 @@ namespace TagWall.core
             _userInformation = userInformation;
             SetupTextNoteOption();
         }
-
+        /// <summary>
+        /// Create string message with wall's layer information
+        /// </summary>
+        /// <param name="wall">name of wall</param>
+        /// <returns></returns>
         public string Create(Wall wall)
         {
             var layers = wall.WallType.GetCompoundStructure().GetLayers();
@@ -37,6 +41,7 @@ namespace TagWall.core
                     msg.Append($" {material}");
                 msg.AppendLine();
             }
+
             return msg.ToString();
         }
 

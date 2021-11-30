@@ -4,6 +4,11 @@ namespace TagWall.core
 {
     public static class Validation
     {
+        /// <summary>
+        /// Check if function can be used in current view
+        /// </summary>
+        /// <param name="doc">name of current document</param>
+        /// <returns>true or false</returns>
         public static bool CanCreateTextNote(Document doc)
         {
             var activeView = doc.ActiveView;
@@ -24,7 +29,11 @@ namespace TagWall.core
                     return false;
             }
         }
-
+        /// <summary>
+        /// Check if function can be used on chosen wall
+        /// </summary>
+        /// <param name="wall">Name of chosen wall</param>
+        /// <returns>true or false</returns>
         public static bool IsWallProper(Wall wall)
         {
             if (wall.IsStackedWall)

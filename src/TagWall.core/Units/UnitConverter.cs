@@ -4,6 +4,13 @@ namespace TagWall.core
 {
     public static class UnitConverter
     {
+        /// <summary>
+        /// Convert feets to metric units
+        /// </summary>
+        /// <param name="value">Length in feets</param>
+        /// <param name="decimals">Accuracy of returned value</param>
+        /// <param name="type">Type of metric unit</param>
+        /// <returns>Value in specified format</returns>
         public static double Convert(double value, int decimals, UnitsType type)
         {
             var _feetMetersRatio = 0.3048;

@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Autodesk.Revit.UI;
 using Autodesk.Revit.DB;
@@ -56,7 +50,10 @@ namespace TagWall.core
             Close();
         }
 
-
+        /// <summary>
+        /// Gets infromation from user
+        /// </summary>
+        /// <returns></returns>
         public FormData GetInfromation()
         {
             var formData = new FormData();
@@ -70,6 +67,7 @@ namespace TagWall.core
 
             return formData;
         }
+
         private void SetupTextTypes()
         {
             var doc = _uidoc.Document;

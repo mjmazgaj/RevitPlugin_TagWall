@@ -4,6 +4,11 @@ namespace TagWall.core
 {
     public static class ShowMessage
     {
+        /// <summary>
+        /// shows taksDialog with specified message and type
+        /// </summary>
+        /// <param name="message">text of message</param>
+        /// <param name="type">type of message</param>
         public static void Create(string message, MessageType type)
         {
             string title = "";

@@ -22,7 +22,7 @@ namespace TagWall.core
 
             if (!Validation.CanCreateTextNote(doc))
             {
-                ShowMessage.Create("Funkcja nie działa na tym widoku", MessageType.Error);
+                ShowMessage.Create("Function can't be used", MessageType.Error);
                 return Result.Cancelled;
             }
 
