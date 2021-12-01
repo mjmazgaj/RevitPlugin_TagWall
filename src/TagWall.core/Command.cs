@@ -36,22 +36,28 @@ namespace TagWall.core
                 userInformation = tagWallForm.GetInfromation();
             }
 
-            var elementReferance = uidoc.Selection.PickObject(ObjectType.Element, new SelectionFilterByCategory("Walls"), "Select basic wall");
-            var wall = (Wall)doc.GetElement(elementReferance);
-
-            if (!Validation.IsWallProper(wall))
-                return Result.Cancelled;
-
-            var pt = uidoc.Selection.PickPoint("Pick a point");
-
-            var tagWallTextNote = new TagWallTextNote(userInformation);
-            var msg = tagWallTextNote.Create(wall);
-
-            using (var transaction = new Transaction(doc))
+            try
             {
-                transaction.Start("Tag Wall Annotate");
-                TextNote.Create(doc, doc.ActiveView.Id, pt, msg, tagWallTextNote.TextNoteOptions);
-                transaction.Commit();
+                var elementReferance = uidoc.Selection.PickObject(ObjectType.Element, new SelectionFilterByCategory("Walls"), "Select basic wall");
+                var wall = (Wall)doc.GetElement(elementReferance);
+
+                if (!Validation.IsWallProper(wall))
+                    return Result.Cancelled;
+
+                var pt = uidoc.Selection.PickPoint("Pick a point");
+                var tagWallTextNote = new TagWallTextNote(userInformation);
+                var msg = tagWallTextNote.Create(wall);
+
+                using (var transaction = new Transaction(doc))
+                {
+                    transaction.Start("Tag Wall Annotate");
+                    TextNote.Create(doc, doc.ActiveView.Id, pt, msg, tagWallTextNote.TextNoteOptions);
+                    transaction.Commit();
+                }
+            }
+            catch (System.Exception)
+            {
+                return Result.Cancelled;
             }
 
             return Result.Succeeded;
