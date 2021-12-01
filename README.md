@@ -15,9 +15,8 @@ to quickly share it with coworkers.
 - Gets infromation from software
 - Creates description
 
-![alt text](https://github.com/mjmazgaj/RevitPlugin_TagWall/blob/master/Step_1.png?raw=true)
-![alt text](https://github.com/mjmazgaj/RevitPlugin_TagWall/blob/master/Step_2.png?raw=true)
-![alt text](https://github.com/mjmazgaj/RevitPlugin_TagWall/blob/master/Step_3.png?raw=true)
+![alt text](https://github.com/mjmazgaj/RevitPlugin_TagWall/blob/master/prt%20sc/Step_1.png?raw=true)
+![alt text](https://github.com/mjmazgaj/RevitPlugin_TagWall/blob/master/prt%20sc/Step_3.png?raw=true)
 
 
 ## Authors
